@@ -1,0 +1,30 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "",
+  "extends": [
+    "config:base",
+    "npm:unpublishSafe",
+    "regexManagers:dockerfileVersions"
+  ],
+  "schedule": ["before 3am on Monday"],
+  "regexManagers": [
+    {
+      "fileMatch": [".*"],
+      "matchStrings": [
+        "renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?( registryUrl=(?<registryUrl>.*?))?\\n.+?_(VERSION|version|TAG|tag)\\s*[?]?[=:]\\s*(?<currentValue>.*?)\\s"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchDatasources": ["maven", "github-releases"],
+      "groupName": "org.jetbrains.kotlin",
+      "matchPackageNames": [
+        "org.jetbrains.kotlin.jvm:org.jetbrains.kotlin.jvm.gradle.plugin",
+        "org.jetbrains.kotlin:kotlin-maven-plugin",
+        "jetbrains/kotlin"
+      ]
+    }
+  ]
+}
