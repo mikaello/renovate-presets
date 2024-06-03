@@ -21,9 +21,9 @@
       "matchDatasources": ["maven", "github-releases"],
       "groupName": "org.jetbrains.kotlin",
       "matchPackageNames": [
-        "org.jetbrains.kotlin.jvm",
         "org.jetbrains.kotlin.jvm:org.jetbrains.kotlin.jvm.gradle.plugin",
         "org.jetbrains.kotlin:kotlin-maven-plugin",
+        "JetBrains/kotlin",
         "jetbrains/kotlin"
       ]
     }
