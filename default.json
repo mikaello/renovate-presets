@@ -18,7 +18,7 @@
   ],
   "packageRules": [
     {
-      "matchPackageNames": ["actions/checkout"],
+      "matchPackageNames": ["actions/checkout", "actions/setup-go", "actions/setup-node"],
       "automerge": true,
       "platformAutomerge": true
     },
