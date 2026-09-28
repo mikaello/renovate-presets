@@ -18,9 +18,19 @@
   ],
   "packageRules": [
     {
-      "matchPackageNames": ["actions/checkout", "actions/setup-go", "actions/setup-node"],
-      "automerge": true,
-      "platformAutomerge": true
+      "matchPackageNames": [
+        "actions/checkout",
+        "actions/setup-go",
+        "actions/setup-node"
+      ],
+      "automerge": true
+    },
+    {
+      "description": "Wait for TypeScript 7.1 before upgrading from TypeScript 6",
+      "matchDatasources": ["npm"],
+      "matchPackageNames": ["typescript"],
+      "matchCurrentVersion": ">=6.0.0 <7.0.0",
+      "allowedVersions": "<7.0.0 || >=7.1.0"
     },
     {
       "matchDatasources": ["maven", "github-releases"],
