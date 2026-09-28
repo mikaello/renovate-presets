@@ -23,8 +23,7 @@
         "actions/setup-go",
         "actions/setup-node"
       ],
-      "automerge": true,
-      "platformAutomerge": true
+      "automerge": true
     },
     {
       "description": "Skip TypeScript 7.0 until compiler API consumers support 7.1",
