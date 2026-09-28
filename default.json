@@ -26,6 +26,10 @@
       "automerge": true
     },
     {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    },
+    {
       "description": "Wait for TypeScript 7.1 before upgrading from TypeScript 6",
       "matchDatasources": ["npm"],
       "matchPackageNames": ["typescript"],
