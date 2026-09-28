@@ -6,7 +6,12 @@
     "npm:unpublishSafe",
     "regexManagers:dockerfileVersions"
   ],
-  "schedule": ["before 3am on Monday"],
+  "timezone": "Europe/Oslo",
+  "schedule": [
+    "every 2 weeks starting on the 2nd week after 10pm on Sunday",
+    "on the 53rd week after 10pm on Sunday",
+    "every 2 weeks before 8am on Monday"
+  ],
   "regexManagers": [
     {
       "fileMatch": [".*"],
