@@ -18,9 +18,19 @@
   ],
   "packageRules": [
     {
-      "matchPackageNames": ["actions/checkout", "actions/setup-go", "actions/setup-node"],
+      "matchPackageNames": [
+        "actions/checkout",
+        "actions/setup-go",
+        "actions/setup-node"
+      ],
       "automerge": true,
       "platformAutomerge": true
+    },
+    {
+      "description": "Skip TypeScript 7.0 until compiler API consumers support 7.1",
+      "matchDatasources": ["npm"],
+      "matchPackageNames": ["typescript"],
+      "allowedVersions": "<7.0.0 || >=7.1.0"
     },
     {
       "matchDatasources": ["maven", "github-releases"],
