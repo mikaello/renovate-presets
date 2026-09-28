@@ -26,9 +26,10 @@
       "automerge": true
     },
     {
-      "description": "Skip TypeScript 7.0 until compiler API consumers support 7.1",
+      "description": "Wait for TypeScript 7.1 before upgrading from TypeScript 6",
       "matchDatasources": ["npm"],
       "matchPackageNames": ["typescript"],
+      "matchCurrentVersion": ">=6.0.0 <7.0.0",
       "allowedVersions": "<7.0.0 || >=7.1.0"
     },
     {
